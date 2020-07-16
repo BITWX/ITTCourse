@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report_cursos" pageWidth="595" pageHeight="842" whenNoDataType="NoDataSection" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7e6a8ef8-c737-48bf-af6e-72b401ca52be">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="id" class="java.lang.Integer"/>
+	<field name="nombre" class="java.lang.String"/>
+	<field name="descripcion" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="159" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="50" width="90" height="20" uuid="264eefa4-2f03-4de0-8247-275d716c753e"/>
+				<text><![CDATA[ID. del Curso:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="90" width="90" height="20" uuid="a9bc6876-952a-4ed0-8bad-fa93d9867af1"/>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="130" width="90" height="20" uuid="028ef9e9-34e0-4357-bfb5-29e8b9787555"/>
+				<text><![CDATA[Descripción:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="190" y="0" width="180" height="30" uuid="c8902aa7-8c6b-4f0c-b90b-af73b3dbadfc"/>
+				<textElement>
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Cursos Seleccionados"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="50" width="110" height="20" uuid="ee2b47bb-7e8c-43a8-b769-f361cb61acd5"/>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="90" width="280" height="20" uuid="d3a04ca3-0683-494d-a33b-25098990ae04"/>
+				<textFieldExpression><![CDATA[$F{nombre}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="130" width="280" height="20" uuid="e4b9d173-f0e3-4734-9212-337160d0a45c"/>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<noData>
+		<band height="61">
+			<staticText>
+				<reportElement x="0" y="20" width="550" height="30" uuid="af8f8f35-4888-407f-ac8b-4cfb02153d59"/>
+				<textElement textAlignment="Center">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[No se encontrón información relacionada.]]></text>
+			</staticText>
+		</band>
+	</noData>
+</jasperReport>
